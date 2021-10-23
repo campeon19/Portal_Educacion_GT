@@ -72,4 +72,10 @@
     .lessons {
         width: 0;
     }
+    .row {
+        flex-direction: column;
+    }
+    .row div {
+        margin-top: 15px;
+    }
 }

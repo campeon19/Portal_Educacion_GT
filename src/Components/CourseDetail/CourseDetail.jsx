@@ -3,10 +3,7 @@ import styles from './CourseDetail.module.css';
 import { useParams } from 'react-router-dom';
 import IconButton from '../IconButton/IconButton';
 import shareIcon from '../../assets/icons/share.svg';
-
-// DOMMY IMAGE
-
-import { useState } from 'react';
+import {  useState } from 'react';
 
 const DUMMY_DATA = [
   {
@@ -91,6 +88,7 @@ const CourseDetail = () => {
           {DUMMY_DATA.map((item, index) => {
             return (
               <LessonItem
+                key={index}
                 title={item.title}
                 time={item.duration}
                 image={item.image}

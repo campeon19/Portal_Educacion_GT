@@ -1,0 +1,23 @@
+{
+  "becas": [
+    {
+      "title": "universidad del valle"
+    }
+  ],
+  "cursos": [
+    {
+      "title": "Matematicas",
+      "image": "url_imagen",
+      "descripcion": "Las matematicas para la vida de ingeniero",
+      "lecciones": [
+        {
+          "title": "Ecuaciones diferenciales",
+          "image": "imagen_url",
+          "description": "El mundo de las ecuaciones diferenciales",
+          "video_url": "youtube"
+        }
+      ]
+    }
+  ],
+  "trabajos": []
+}

@@ -15,7 +15,7 @@ const LessonItem = (props) => {
           <p className={styles.title}>{props.title}</p>
           <div className={styles.bottom}>
             <img src={playIcon} alt="" />
-            <p>{props.time}</p>
+            <p>{props.time} minutos</p>
           </div>
         </div>
       </div>

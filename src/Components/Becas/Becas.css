@@ -1,0 +1,28 @@
+.beca-card {
+  display: inline-block;
+  margin: 1%;
+  margin-top: 80px;
+  width: 100%;
+  box-shadow: 0px 16px 20px 3px #00000081;
+  border-radius: 10px;
+}
+
+.img-fluid.size-img {
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.container .beca-card h2 {
+  margin-top: 30px;
+  font-size: 48px;
+}
+
+.container .beca-card p {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.container .beca-card h4 {
+  margin-top: 20px;
+}

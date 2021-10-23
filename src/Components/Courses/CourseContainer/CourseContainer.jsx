@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import Course from './CourseCard/Course';
+import Course from '../CourseCard/Course';
 import './CourseContainer.css'
 
 import math from './assets/calculus.jpg'

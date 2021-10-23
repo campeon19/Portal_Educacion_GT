@@ -3,6 +3,7 @@ import Select from 'react-select'
 import './CourseSearcher.css'
 import CourseContainer from './CourseContainer/CourseContainer'
 import { fetchCourses } from '../../util/http';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const options = [
     { value: 'math', label: 'Matemática' },
@@ -31,7 +32,7 @@ function CourseSearcher() {
         const selectedTopics = categories.map((category)=>{
             return category.value
         })
-        
+
         setCourses(data.filter((c)=>{
             return selectedTopics.includes(c.tema) && c.nombre.toLocaleLowerCase().includes(searchedCourse.toLocaleLowerCase())
         }))
@@ -43,6 +44,7 @@ function CourseSearcher() {
         fetchCourses().then(
             (datos)=>{
                 const databaseCourses = datos.map((curso, index)=>{
+                    delete curso.lecciones
                     return {id:index, ...curso }
 
                 }) 
@@ -84,7 +86,8 @@ function CourseSearcher() {
     </div>
   </div>
 </form>
-        <CourseContainer courses={courses}/>
+
+        {data.length !== 0?<CourseContainer courses={courses}/>: <LoadingSpinner/>}
   </>
     )
 }

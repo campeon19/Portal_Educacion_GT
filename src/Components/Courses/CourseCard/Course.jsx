@@ -1,10 +1,19 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'
 import './Course.css';
 
 function Course(props) {
+    const history = useHistory();
+    const courseClickHandler= () =>{
+        console.log('me han tocado chaval')
+        history.push({
+            pathname: `/courses/` + props.course.id
+          });
+    }
+
     return (
         <div className ='course-card'>
-            <div className="container h-100 full-width">
+            <div onClick={courseClickHandler} className="container h-100 full-width">
     <div className="row align-items-center">
         <div className="col mx-auto text-center">
                 <h3>{props.course.nombre}</h3>

@@ -4,7 +4,11 @@ import arrowIcon from '../../assets/icons/arrow.svg';
 
 const LessonItem = (props) => {
   return (
-    <div className={styles.item}>
+    <div
+      className={styles.item}
+      style={{ backgroundColor: props.isCurrent ? '#d1d1d1' : 'white' }}
+      onClick={props.onClick}
+    >
       <div className={styles.mainContent}>
         <img className={styles.image} src={props.image} alt="" />
         <div className={styles.main}>
@@ -16,7 +20,9 @@ const LessonItem = (props) => {
         </div>
       </div>
 
-      <img className={styles.arrow} src={arrowIcon} alt="" />
+      {!props.isCurrent && (
+        <img className={styles.arrow} src={arrowIcon} alt="" />
+      )}
     </div>
   );
 };

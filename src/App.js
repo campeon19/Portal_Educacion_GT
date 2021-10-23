@@ -1,5 +1,6 @@
 import Layout from './Components/Layout/Layout';
 import { Switch, Route } from 'react-router-dom';
+import Navbar_Course from './Components/Navbars/Navbar-Courses'
 
 function App() {
   return (

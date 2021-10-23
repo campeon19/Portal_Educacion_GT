@@ -1,4 +1,4 @@
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbars/Navbar';
 import styles from './Layout.module.css';
 
 const Layout = (props) => {

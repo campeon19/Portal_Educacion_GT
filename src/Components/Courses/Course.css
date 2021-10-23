@@ -1,0 +1,19 @@
+.course-card{
+    display: inline-block;
+    margin: 1%;
+    height: 50vh;
+    width: 45vh;
+    box-shadow: 0px 26px 30px 10px #00000081;
+    border-radius: 5%;
+}
+.inner-card-image{
+    width: 80% !important;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    align-self: auto;
+    margin: auto;
+    display: block;
+}
+.full-width{
+    width: 100% !important;
+}

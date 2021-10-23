@@ -1,0 +1,8 @@
+.layout {
+    width: 100vw;
+}
+
+.main {
+    height: calc(100vh - 56px);
+    width: 100%;
+}

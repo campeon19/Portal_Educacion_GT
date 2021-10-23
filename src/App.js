@@ -1,8 +1,15 @@
-
+import Layout from './Components/Layout/Layout';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-   <div>App</div>
+    <Layout>
+      <Switch>
+        <Route path="/" exact>
+          <h1>main</h1>
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 

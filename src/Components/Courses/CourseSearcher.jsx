@@ -14,16 +14,18 @@ const options = [
     { value: 'physics', label: 'Física' },
     { value: 'chemistry', label: 'Química' },
     { value: 'biology', label: 'Biología' },
-    { value: 'language', label: 'Lenguaje' }
+    { value: 'language', label: 'Lenguaje'}
 ] 
+const images = 
+    {math: math, physics: physics, chemistry: chemistry, biology: biology, language: language}
 
 const cursos = [
-    {id:0, tema:'math', nombre: 'Calculo 1', brief: 'Aprende limites, derivadas e integrales. Además de optimización de funciones', picture:math},
-    {id:1, tema:'math', nombre: 'Precalculo', brief: 'Aprende reglas de exponentes, logaritmicas y a resolver ecuaciones trigonometricas', picture:math},
-    {id:2, tema:'physics', nombre: 'Fisica fundamental', brief: 'Aprende acerca de los vectores, que significan y como aplicarlos', picture:physics},
-    {id:3, tema:'language', nombre: 'Comunicacion', brief: 'Aprende redacción, ortografía, gramática y a comunicarte efectivamente', picture:language},
-    {id:4, tema:'chemistry', nombre: 'Química general', brief: 'Aprende acerca reacciones básicas, el átomo y estequeometría', picture:chemistry},
-    {id:5, tema:'biology', nombre: 'Biología básica', brief: 'Aprende acerca de la celula, microorganismos y la fotosintesis', picture:biology}
+    {id:0, tema:'math', nombre: 'Calculo 1', brief: 'Aprende limites, derivadas e integrales. Además de optimización de funciones'},
+    {id:1, tema:'math', nombre: 'Precalculo', brief: 'Aprende reglas de exponentes, logaritmicas y a resolver ecuaciones trigonometricas'},
+    {id:2, tema:'physics', nombre: 'Fisica fundamental', brief: 'Aprende acerca de los vectores, que significan y como aplicarlos'},
+    {id:3, tema:'language', nombre: 'Comunicacion', brief: 'Aprende redacción, ortografía, gramática y a comunicarte efectivamente'},
+    {id:4, tema:'chemistry', nombre: 'Química general', brief: 'Aprende acerca reacciones básicas, el átomo y estequeometría'},
+    {id:5, tema:'biology', nombre: 'Biología básica', brief: 'Aprende acerca de la celula, microorganismos y la fotosintesis'}
 ]
 
 function CourseSearcher() {
@@ -79,7 +81,7 @@ function CourseSearcher() {
     </div>
   </div>
 </form>
-        <CourseContainer courses={courses}/>
+        <CourseContainer courses={courses} pictures={images}/>
   </>
     )
 }

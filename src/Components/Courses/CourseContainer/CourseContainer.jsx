@@ -5,14 +5,14 @@ import './CourseContainer.css'
 
 
 
-function CourseContainer({courses}) {
+function CourseContainer({courses, pictures}) {
     
 
     return (
         <div className='courses-countainer'>
             {
                 courses.map((course)=>{
-                    return <Course course={course}/>
+                    return <Course course={{...course, picture: pictures[course.tema]}}/>
                 })
             }
         </div>

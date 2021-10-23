@@ -18,21 +18,21 @@ export default function Navbar() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navcol-1">
-              <ul className="navbar-nav flex-grow-1">
+              <ul className="navbar-nav flex-grow-1 justify-content-center">
                 <li className="nav-item" role="presentation">
-                    <a class="nav-link px-3" aria-current="page" href="#">Home</a>
+                    <a className="nav-link px-5" aria-current="page" href="#">Home</a>
                 </li>
                 <li className="nav-item" role="presentation">
-                    <a class="nav-link px-3" aria-current="page" href="#">Cursos</a>
+                    <a className="nav-link px-5" aria-current="page" href="#">Cursos</a>
                 </li>
                 <li className="nav-item" role="presentation">
-                    <a class="nav-link px-3" aria-current="page" href="#">Informacion Becas</a>
+                    <a className="nav-link px-5" aria-current="page" href="#">Informacion Becas</a>
                 </li>
                 <li className="nav-item" role="presentation">
-                    <a class="nav-link px-3" aria-current="page" href="#">Informacion Trabajos</a>                  
+                    <a className="nav-link px-5" aria-current="page" href="#">Informacion Trabajos</a>                  
                 </li>
               </ul>
             </div>

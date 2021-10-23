@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.main {
+    height: 100%;
+    width: calc(100% - 300px);
+}
+
+.lessons {
+    height: 100%;
+    width: 300px;
+    background-color: rgb(245, 245, 245);
+}
+
+.lessonsHeader {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.lessonsMain {
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
+.title {
+    margin-left: 15px;
+}
+
+.video {
+    width: 100%;
+    height: 70vh;
+}
+
+
+@media (max-width: 1000px) {
+    .main {
+        width: 100%;
+    }
+    .lessons {
+        width: 0;
+    }
+}

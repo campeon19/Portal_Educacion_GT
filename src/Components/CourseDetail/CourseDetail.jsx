@@ -18,7 +18,6 @@ const CourseDetail = () => {
         ></iframe>
 
         <h1 className={styles.title}>Hola mundo 1</h1>
-
       </div>
       <div className={styles.lessons}>
         <div className={styles.lessonsHeader}>Listado de lecciones</div>

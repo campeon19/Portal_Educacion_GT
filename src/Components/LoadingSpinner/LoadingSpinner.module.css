@@ -1,0 +1,28 @@
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    height: 60px;
+    width: 60px;
+    border: 6px solid black;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation-name: loading;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}

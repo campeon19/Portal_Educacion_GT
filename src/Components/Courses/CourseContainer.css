@@ -1,0 +1,7 @@
+.courses-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+}

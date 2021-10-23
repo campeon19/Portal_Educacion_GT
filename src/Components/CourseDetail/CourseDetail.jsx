@@ -5,6 +5,7 @@ import IconButton from '../IconButton/IconButton';
 import shareIcon from '../../assets/icons/share.svg';
 import { Fragment, useCallback, useEffect, useState } from 'react';
 import { fetchCourseDetail } from '../../util/http';
+import NoData from '../NoData/NoData';
 
 const CourseDetail = () => {
   const { id } = useParams();
@@ -89,7 +90,7 @@ const CourseDetail = () => {
           </div>
         </div>
       )}
-      {!data && <p>No hay informacion disponible</p>}
+      {!data && <NoData />}
     </Fragment>
   );
 };

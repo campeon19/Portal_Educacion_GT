@@ -1,0 +1,32 @@
+.item {
+    padding: 5px 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: rgb(207, 207, 207);
+}
+
+.title {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.bottom {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.bottom img {
+    height: 12px;
+    width: 12px;
+}
+
+.bottom p {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 0.7rem;
+}

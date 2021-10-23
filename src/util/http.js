@@ -9,3 +9,13 @@ export const fetchCourseDetail = async (id) => {
     return null;
   }
 };
+
+export const fetchCourses = async (id) => {
+  try {
+    const response = await fetch(`${RAIZ}cursos.json`);
+    const data = await response.json();
+    return data;
+  } catch (e) {
+    return null;
+  }
+};

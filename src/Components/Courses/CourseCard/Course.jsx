@@ -1,6 +1,6 @@
 import React from 'react';
 import './Course.css';
-import calculus from '../assets/calculus.jpg'
+
 function Course(props) {
     return (
         <div className ='course-card'>

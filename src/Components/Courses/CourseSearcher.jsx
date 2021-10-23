@@ -1,13 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Select from 'react-select'
 import './CourseSearcher.css'
 import CourseContainer from './CourseContainer/CourseContainer'
-import math from './assets/calculus.jpg'
-import physics from './assets/physics.jpg'
-import language from './assets/communication.jpg'
-import chemistry from './assets/chemistry.jfif'
-import biology from './assets/biology.jpg'
-
+import { fetchCourses } from '../../util/http';
 
 const options = [
     { value: 'math', label: 'Matemática' },
@@ -16,22 +11,13 @@ const options = [
     { value: 'biology', label: 'Biología' },
     { value: 'language', label: 'Lenguaje'}
 ] 
-const images = 
-    {math: math, physics: physics, chemistry: chemistry, biology: biology, language: language}
 
-const cursos = [
-    {id:0, tema:'math', nombre: 'Calculo 1', brief: 'Aprende limites, derivadas e integrales. Además de optimización de funciones'},
-    {id:1, tema:'math', nombre: 'Precalculo', brief: 'Aprende reglas de exponentes, logaritmicas y a resolver ecuaciones trigonometricas'},
-    {id:2, tema:'physics', nombre: 'Fisica fundamental', brief: 'Aprende acerca de los vectores, que significan y como aplicarlos'},
-    {id:3, tema:'language', nombre: 'Comunicacion', brief: 'Aprende redacción, ortografía, gramática y a comunicarte efectivamente'},
-    {id:4, tema:'chemistry', nombre: 'Química general', brief: 'Aprende acerca reacciones básicas, el átomo y estequeometría'},
-    {id:5, tema:'biology', nombre: 'Biología básica', brief: 'Aprende acerca de la celula, microorganismos y la fotosintesis'}
-]
 
 function CourseSearcher() {
+    const[data, setData] = useState("");
     const[searchedCourse, setSearchedCourse] = useState("");
     const [categories, setCategories] = useState(options);
-    const [courses, setCourses] = useState(cursos);
+    const [courses, setCourses] = useState([]);
 
     const handleTags = (tags) =>{
         console.log(tags);
@@ -45,14 +31,31 @@ function CourseSearcher() {
         const selectedTopics = categories.map((category)=>{
             return category.value
         })
-        // TODO: conectar con base de datos
-        setCourses(cursos.filter((c)=>{
+        
+        setCourses(data.filter((c)=>{
             return selectedTopics.includes(c.tema) && c.nombre.toLocaleLowerCase().includes(searchedCourse.toLocaleLowerCase())
         }))
         console.log('Submiteando xd')
         e.preventDefault()
 
     }
+    useEffect(()=>{
+        fetchCourses().then(
+            (datos)=>{
+                const databaseCourses = datos.map((curso, index)=>{
+                    return {id:index, ...curso }
+
+                }) 
+
+                console.log(databaseCourses)
+                setData(databaseCourses
+                )
+                setCourses(databaseCourses)
+                
+            }
+        )
+    },[])
+
 
 
 
@@ -81,7 +84,7 @@ function CourseSearcher() {
     </div>
   </div>
 </form>
-        <CourseContainer courses={courses} pictures={images}/>
+        <CourseContainer courses={courses}/>
   </>
     )
 }

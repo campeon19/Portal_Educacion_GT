@@ -6,13 +6,16 @@ import shareIcon from '../../assets/icons/share.svg';
 import { Fragment, useCallback, useEffect, useState } from 'react';
 import { fetchCourseDetail } from '../../util/http';
 import NoData from '../NoData/NoData';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const CourseDetail = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
   const [current, setCurrent] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = useCallback(async () => {
+    setIsLoading(true);
     const dataR = await fetchCourseDetail(id);
 
     if (dataR) {
@@ -24,6 +27,7 @@ const CourseDetail = () => {
     } else {
       setData(null);
     }
+    setIsLoading(false);
   }, [id]);
 
   useEffect(() => {
@@ -90,7 +94,8 @@ const CourseDetail = () => {
           </div>
         </div>
       )}
-      {!data && <NoData />}
+      {isLoading && <LoadingSpinner />}
+      {!data && !isLoading && <NoData />}
     </Fragment>
   );
 };

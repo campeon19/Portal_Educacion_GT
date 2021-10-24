@@ -1,10 +1,15 @@
 .beca-card {
   display: inline-block;
   margin: 1%;
-  margin-top: 80px;
+  margin-top: 50px;
   width: 100%;
-  box-shadow: 0px 16px 20px 3px #00000081;
+  box-shadow: 0px 8px 15px 1px #00000081;
   border-radius: 10px;
+}
+
+.beca-card:hover {
+  background-color: #e0e0e081;
+  cursor: pointer;
 }
 
 .img-fluid.size-img {

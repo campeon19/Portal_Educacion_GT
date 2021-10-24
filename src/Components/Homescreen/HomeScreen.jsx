@@ -18,7 +18,7 @@ function HomeScreen() {
               repaso para prepararte bien antes o al inicio de la Universidad
             </p>
             <p className="lead mb-0">
-              <a href="#" className="text-white font-weight-bold">
+              <a href="courses" className="text-white font-weight-bold">
                 Ve nuestros cursos preparativos...
               </a>
             </p>
@@ -41,7 +41,7 @@ function HomeScreen() {
                   Informate y encuentra todas las oportunidades de beca o
                   financiamiento perfectas para ti
                 </p>
-                <a href="#" className="text-muted stretched-link">
+                <a href="becas" className="text-muted stretched-link">
                   Busca becas y financiamiento
                 </a>
               </div>
@@ -68,7 +68,7 @@ function HomeScreen() {
                   estudiar al mismo tiempo, con empresas que apoyan a los
                   estudiantes
                 </p>
-                <a href="#" className="text-muted stretched-link">
+                <a href="jobs" className="text-muted stretched-link">
                   Encuentra tu trabajo ideal
                 </a>
               </div>

@@ -10,13 +10,9 @@ const JobCard = (props) => {
   const showText =
     description.length > 75 ? description.slice(0, 75) + '...' : description;
 
-  let moreThan3;
-
-  if (requirements.length > 3) {
-    moreThan3 = requirements.length - 3;
-  }
 
   const navigate = () => history.push(`/jobs/${props.id}`);
+  
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -32,7 +28,7 @@ const JobCard = (props) => {
       </div>
 
       <div className={styles.requirements}>
-        {(moreThan3 ? requirements.slice(0, 3) : requirements).map(
+        {/* {(moreThan3 ? requirements.slice(0, 3) : requirements).map(
           (item, index) => {
             return (
               <div key={index} className={styles.requirementsItem}>
@@ -40,9 +36,9 @@ const JobCard = (props) => {
               </div>
             );
           }
-        )}
+        )} */}
 
-        {moreThan3 && <div className={styles.moreR}>+{moreThan3}</div>}
+        {<div className={styles.moreR}>Habilidades: {requirements.length}</div>}
       </div>
 
       <p className={styles.description}>{showText}</p>

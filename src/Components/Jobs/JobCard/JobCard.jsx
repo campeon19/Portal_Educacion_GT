@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 const JobCard = (props) => {
   const history = useHistory();
-  const { id, time, payment, title, company, requirements, description } =
+  const { time, payment, title, company, requirements, description } =
     props.data;
 
   const showText =
@@ -16,7 +16,7 @@ const JobCard = (props) => {
     moreThan3 = requirements.length - 3;
   }
 
-  const navigate = () => history.push(`/jobs/${id}`);
+  const navigate = () => history.push(`/jobs/${props.id}`);
   return (
     <div className={styles.container}>
       <div className={styles.header}>

@@ -1,0 +1,21 @@
+.container .img-info {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.container .img-info2 {
+  height: 200px;
+}
+
+.title-info {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+.subtitle-info {
+}

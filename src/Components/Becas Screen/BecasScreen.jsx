@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import BecasCard from '../Becas/Becas'
 import imgHeader from '../Becas/Assets/becas_header.jpg'
 import imgHeader2 from '../Becas/Assets/becas3.jpg'
 import './BecasScreen.css'
+import { fetchBecas } from '../../util/http';
 
 import uvg from '../Becas/Assets/logoUVG.jpg'
 import fjbg from '../Becas/Assets/becaFJBG.jpg'
@@ -17,7 +18,26 @@ const info = [
 
 
 export default function Becas() {
-    const [becas, setbecas] = useState(info)
+    const [becas, setbecas] = useState([])
+
+    // fetchBecas(1).then((datos) =>{
+    //     setbecas(data.map((beca, index) =>{
+    //         {...beca, id:index}
+    //     }))
+    // })
+
+    useEffect(() =>{
+        fetchBecas().then(
+            (datos) =>{
+                setbecas(datos.map((beca, index) =>{
+                    return {id:index, ...beca}
+                }))
+            }
+        )
+    }, [])
+
+    console.log(becas)
+
     return (
         <div>
             <div className='container-size'>

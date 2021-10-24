@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Navbar_Course from './Components/Navbars/Navbar-Courses';
 import CourseSearcher from './Components/Courses/CourseSearcher';
 import Becas from './Components/Becas Screen/BecasScreen';
+import BecasInfo from './Components/BecasInfo/BecasInfo';
 import Jobs from './Components/Jobs/Jobs';
 import JobDetail from './Components/Jobs/JobDetail/JobDetail';
 import HomeScreen from './Components/Homescreen/HomeScreen';
@@ -21,7 +22,9 @@ function App() {
         <Route path="/becas" exact>
           <Becas />
         </Route>
-
+        <Route path="/becas/:id" exact>
+          <BecasInfo />
+        </Route>
         <Route path="/jobs" exact>
           <Jobs />
         </Route>

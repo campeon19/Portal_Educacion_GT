@@ -3,6 +3,7 @@ import CourseDetail from './Components/CourseDetail/CourseDetail';
 import { Switch, Route } from 'react-router-dom';
 import Navbar_Course from './Components/Navbars/Navbar-Courses'
 import CourseSearcher from './Components/Courses/CourseSearcher';
+import Jobs from './Components/Jobs/Jobs';
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
         </Route>
         <Route path="/courses/:id" exact>
           <CourseDetail />
+        </Route>
+
+        <Route path="/jobs" exact>
+          <Jobs />
         </Route>
       </Switch>
     </Layout>

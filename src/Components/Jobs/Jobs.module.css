@@ -1,0 +1,36 @@
+.screen {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    padding: 15px;
+}
+
+.jobsContainer {
+    width: 100%;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+@media (max-width: 1600px) {
+    .jobsContainer {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media (max-width: 1300px) {
+    .jobsContainer {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .jobsContainer {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .jobsContainer {
+        grid-template-columns: auto;
+    }
+}

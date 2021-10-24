@@ -1,23 +1,62 @@
 {
-  "becas": [
-    {
-      "title": "universidad del valle"
-    }
-  ],
+  "becas": [],
   "cursos": [
     {
-      "title": "Matematicas",
-      "image": "url_imagen",
-      "descripcion": "Las matematicas para la vida de ingeniero",
-      "lecciones": [
-        {
-          "title": "Ecuaciones diferenciales",
-          "image": "imagen_url",
-          "description": "El mundo de las ecuaciones diferenciales",
-          "video_url": "youtube"
-        }
-      ]
+      "tema": "math",
+      "nombre": "Calculo 1",
+      "brief": "Aprende limites, derivadas e integrales. Además de optimización de funciones",
+      "picture": "https://prod-discovery.edx-cdn.org/media/course/image/08f162d1-6943-490b-8e0b-ee6fd5ab256e-e59757cca83d.small.jpg",
+      "lecciones": []
+    },
+    {
+      "tema": "math",
+      "nombre": "Precalculo",
+      "brief": "Aprende reglas de exponentes, logaritmicas y a resolver ecuaciones trigonometricas",
+      "picture": "https://i.ytimg.com/vi/kTdHmG3VOKM/maxresdefault.jpg",
+      "lecciones": []
+    },
+    {
+      "tema": "physics",
+      "nombre": "Fisica fundamental",
+      "brief": "Aprende acerca de los vectores, que significan y como aplicarlos",
+      "picture": "https://zamtutor.com/wp-content/uploads/2020/10/physics.jpg",
+      "lecciones": []
+    },
+    {
+      "tema": "language",
+      "nombre": "Comunicacion",
+      "brief": "Aprende redacción, ortografía, gramática y a comunicarte efectivamente",
+      "picture": "https://lh3.googleusercontent.com/proxy/WZHUPzzltvbv5WFP63F9S2ClGGrCifr1eR74xQGA3jM8dIMfQllN8eClE7lulHtLAKGJ-6ElqqZE_Yvp5G5Ec5ozZmuf1TIrst_Kiyl7OFQN1jFVKNLRgwGl7RikT_VcetIsrew",
+      "lecciones": []
+    },
+    {
+      "tema": "chemistry",
+      "nombre": "Química general",
+      " brief": "Aprende acerca reacciones básicas, el átomo y estequeometría",
+      "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/fa/6926005ea411e490ff8d4c5d4ff426/chemistry_logo.png?auto=format%2Ccompress&dpr=1",
+      "lecciones": []
+    },
+    {
+      "tema": "biology",
+      "nombre": "Biología básica",
+      "brief": "Aprende acerca de la celula, microorganismos y la fotosintesis",
+      "picture": "https://debrabell.com/wp-content/uploads/2021/06/Biology-1200x628-1.png",
+      "lecciones": []
     }
   ],
-  "trabajos": []
+  "trabajos": [
+    {
+      "title": "",
+      "company": "",
+      "payment": 0,
+      "time": "",
+      "requirements": [],
+      "description": "",
+      "phone": "",
+      "email": "",
+      "background_image":"",
+      "logo": "",
+      "location": ""
+    }
+  ]
 }

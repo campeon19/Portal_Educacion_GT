@@ -1,8 +1,10 @@
 import styles from './JobCard.module.css';
 import officeIcon from '../../../assets/icons/office-building.png';
+import { useHistory } from 'react-router-dom';
 
 const JobCard = (props) => {
-  const { time, payment, title, company, requirements, description } =
+  const history = useHistory();
+  const { id, time, payment, title, company, requirements, description } =
     props.data;
 
   const showText =
@@ -14,6 +16,7 @@ const JobCard = (props) => {
     moreThan3 = requirements.length - 3;
   }
 
+  const navigate = () => history.push(`/jobs/${id}`);
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -46,7 +49,9 @@ const JobCard = (props) => {
 
       <div className={styles.divisor}></div>
 
-      <div className={styles.button}>VER TRABAJO</div>
+      <div className={styles.button} onClick={navigate}>
+        VER TRABAJO
+      </div>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import styles from './Jobs.module.css';
 
 const DUMMY_JOBS = [
   {
+    id: 1,
     time: 'hourly',
     payment: 1500,
     title: 'UI/UX Designer',
@@ -12,69 +13,7 @@ const DUMMY_JOBS = [
       'We are looking for an experience UI and UX designer to work on our new proyects.',
   },
   {
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-  {
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-  {
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-  {
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-  {
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-  {
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-  {
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-  {
+    id: 1,
     time: 'hourly',
     payment: 1500,
     title: 'UI/UX Designer',

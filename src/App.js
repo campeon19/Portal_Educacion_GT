@@ -6,13 +6,14 @@ import CourseSearcher from './Components/Courses/CourseSearcher';
 import Becas from './Components/Becas Screen/BecasScreen';
 import Jobs from './Components/Jobs/Jobs';
 import JobDetail from './Components/Jobs/JobDetail/JobDetail';
+import HomeScreen from './Components/Homescreen/HomeScreen';
 
 function App() {
   return (
     <Layout>
       <Switch>
         <Route path="/" exact>
-          <CourseSearcher />
+          <HomeScreen/>
         </Route>
         <Route path="/courses/:id" exact>
           <CourseDetail />

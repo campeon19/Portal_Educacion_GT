@@ -1,0 +1,17 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.img {
+    height: 24px;
+    width: 24px;
+}
+
+.title {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}

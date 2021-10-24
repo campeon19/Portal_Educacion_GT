@@ -1,7 +1,12 @@
 .container .search-bar-style {
   width: 600px;
 }
-
+.bg-black{
+  background-color: black !important;
+}
+.logo-image{
+  max-height: 10vh;
+}
 .input-style {
   border-radius: 5px;
   padding-left: 5px;

@@ -5,7 +5,24 @@
 .innitial-banner{
     margin-top: 3vh!important;
 }
+.banner-image-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.banner-image{
+    margin: auto;    
+    display: block;
+    width: 100%;
+}
+.text-hanger-title{
+    color:rgb(39, 80, 119)
+}
+
+.banner-text-link{
+    color:rgb(3, 141, 146)
+}
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;

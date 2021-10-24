@@ -1,13 +1,14 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import logo from './Assets/logo.png';
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-black">
           <div className="container">
             <a className="navbar-brand" href="#">
-              Portal Educacion
+              <img src={logo} className="logo-image"/>
             </a>
             <button
               data-toggle="collapse"

@@ -25,6 +25,9 @@ function App() {
         <Route path="/becas/:id" exact>
           <BecasInfo />
         </Route>
+        <Route path="/courses" exact>
+          <CourseSearcher />
+        </Route>
         <Route path="/jobs" exact>
           <Jobs />
         </Route>

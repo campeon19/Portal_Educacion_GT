@@ -20,6 +20,11 @@
     color:rgb(39, 80, 119)
 }
 
+.logo-about{
+    margin: auto;    
+    display: block;
+
+}
 .banner-text-link{
     color:rgb(3, 141, 146)
 }

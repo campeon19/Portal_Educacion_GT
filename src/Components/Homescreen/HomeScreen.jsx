@@ -3,6 +3,7 @@ import "./HomeScreen.css";
 import work from "./assets/work.png";
 import study from "./assets/study.png";
 import graduated from "./assets/graduated.jpg";
+import miFuturo from './assets/mi_futuro.png'
 function HomeScreen() {
   return (
     <>
@@ -84,131 +85,56 @@ function HomeScreen() {
         </div>
         <div className="row">
           <div className="col-md-8 blog-main">
-            <h3 className="pb-4 mb-4 font-italic border-bottom">
-              From the Firehose
+            <h3 className="pb-4 mb-4 font-italic">
+              Acerca de
             </h3>
 
             <div className="blog-post">
-              <h2 className="blog-post-title">Sample blog post</h2>
-              <p className="blog-post-meta">
-                January 1, 2014 by <a href="#">Mark</a>
-              </p>
-
-              <p>
-                This blog post shows a few different types of content that’s
-                supported and styled with Bootstrap. Basic typography, images,
-                and code are all supported.
-              </p>
+              <h2 className="blog-post-title">¿Qué es Mi Futuro GT?</h2>
+              
               <hr />
               <p>
-                Cum sociis natoque penatibus et magnis{" "}
-                <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
-                Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-                venenatis vestibulum. Sed posuere consectetur est at lobortis.
-                Cras mattis consectetur purus sit amet fermentum.
+              Mi Futuro GT es una multiplataforma estudiantil de estudiantes para estudiantes, en la cual puedes encontrar financiamiento o becas para tus estudios universitarios, trabajos aptos para  estudiar al mismo tiempo y cursos preparatorios para entrar a la universidad o ayudarte en los inicios de tu carrera universitaria.
               </p>
               <blockquote>
                 <p>
-                  Curabitur blandit tempus porttitor.{" "}
-                  <strong>Nullam quis risus eget urna mollis</strong> ornare vel
-                  eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                Nosotros comprendemos que a veces pueden surgir bloqueos de conocimiento para poder estudiar en un nivel superior. Por lo que solucionamos esto mediante cursos hechos por estudiantes universitarios que reciben horas de servicio o créditos a cambio de publicar material educativo.
                 </p>
               </blockquote>
-              <p>
-                Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
-                mattis consectetur purus sit amet fermentum. Aenean lacinia
-                bibendum nulla sed consectetur.
-              </p>
               
               
               <p>
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
-                consectetur. Etiam porta sem malesuada magna mollis euismod.
-                Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus.
+              A veces existe el deseo y la capacidad para estudiar, pero por barreras económicas es imposible financiar este sueño. Por lo que solucionamos esto mediante 2 maneras:
               </p>
               <ul>
                 <li>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur et.
+                Dando información de manera fácil acerca de becas y financiamientos para estudios de educación superior.
                 </li>
-                <li>Donec id elit non mi porta gravida at eget metus.</li>
-                <li>Nulla vitae elit libero, a pharetra augue.</li>
+                <li>Colaborando con empresas, las cuales colocan en nuestra plataforma empleos de medio tiempo los cuales apoyan a los estudiantes al momento de estudiar. También facilitamos el proceso de aplicación a los puestos.</li>
               </ul>
+              <blockquote>
+                <p>
+                Con estas soluciones estamos aportando a eliminar bloqueos que tienen las personas para no poder estudiar una educación superior. Por lo que esperamos que nuestra plataforma sea de gran ayuda y apoyemos a formar a los profesionales del futuro.
+                </p>
+              </blockquote>
               
             </div>
           </div>
 
-          <aside className="col-md-4 blog-sidebar">
-            <div className="p-4 mb-3 bg-light rounded">
-              <h4 className="font-italic">About</h4>
-              <p className="mb-0">
-                Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
-                mattis consectetur purus sit amet fermentum. Aenean lacinia
-                bibendum nulla sed consectetur.
-              </p>
-            </div>
+          <aside className="col-md-4 blog-sidebar my-auto">
+            
 
-            <div className="p-4">
-              <h4 className="font-italic">Archives</h4>
-              <ol className="list-unstyled mb-0">
-                <li>
-                  <a href="#">March 2014</a>
-                </li>
-                <li>
-                  <a href="#">February 2014</a>
-                </li>
-                <li>
-                  <a href="#">January 2014</a>
-                </li>
-                <li>
-                  <a href="#">December 2013</a>
-                </li>
-                <li>
-                  <a href="#">November 2013</a>
-                </li>
-                <li>
-                  <a href="#">October 2013</a>
-                </li>
-                <li>
-                  <a href="#">September 2013</a>
-                </li>
-                <li>
-                  <a href="#">August 2013</a>
-                </li>
-                <li>
-                  <a href="#">July 2013</a>
-                </li>
-                <li>
-                  <a href="#">June 2013</a>
-                </li>
-                <li>
-                  <a href="#">May 2013</a>
-                </li>
-                <li>
-                  <a href="#">April 2013</a>
-                </li>
-              </ol>
-            </div>
+            <img className="logo-about" src ={miFuturo}>
+              
+            </img>
 
-            <div className="p-4">
-              <h4 className="font-italic">Elsewhere</h4>
-              <ol className="list-unstyled">
-                <li>
-                  <a href="#">GitHub</a>
-                </li>
-                <li>
-                  <a href="#">Twitter</a>
-                </li>
-                <li>
-                  <a href="#">Facebook</a>
-                </li>
-              </ol>
-            </div>
           </aside>
         </div>
       </div>
+      <footer className="blog-footer">
+  <p>&copy;Programadores con bata 2021</p>
+  
+</footer>
     </>
   );
 }

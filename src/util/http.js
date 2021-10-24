@@ -19,3 +19,23 @@ export const fetchCourses = async (id) => {
     return null;
   }
 };
+
+export const fetchJobs = async () => {
+  try {
+    const response = await fetch(`${RAIZ}trabajos.json`);
+    const data = await response.json();
+    return data;
+  } catch (e) {
+    return null;
+  }
+};
+
+export const fetchJobDetail = async (id) => {
+  try {
+    const response = await fetch(`${RAIZ}trabajos/${id}.json`);
+    const data = await response.json();
+    return data;
+  } catch (e) {
+    return null;
+  }
+};

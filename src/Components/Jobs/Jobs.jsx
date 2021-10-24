@@ -1,38 +1,39 @@
+import { Fragment, useEffect, useState } from 'react';
 import JobCard from './JobCard/JobCard';
 import styles from './Jobs.module.css';
-
-const DUMMY_JOBS = [
-  {
-    id: 1,
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop', 'UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-  {
-    id: 1,
-    time: 'hourly',
-    payment: 1500,
-    title: 'UI/UX Designer',
-    company: 'Epix Coders',
-    requirements: ['UI', 'UX', 'photoshop'],
-    description:
-      'We are looking for an experience UI and UX designer to work on our new proyects.',
-  },
-];
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import NoData from '../NoData/NoData';
+import { fetchJobs } from '../../util/http';
 
 const Jobs = () => {
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const fetchData = async () => {
+    setIsLoading(true);
+    const response = await fetchJobs();
+    setData(response);
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <div className={styles.screen}>
-      <div className={styles.jobsContainer}>
-        {DUMMY_JOBS.map((item, index) => {
-          return <JobCard data={item} key={index} />;
-        })}
-      </div>
-    </div>
+    <Fragment>
+      {data && (
+        <div className={styles.screen}>
+          <div className={styles.jobsContainer}>
+            {data.map((item, index) => {
+              return <JobCard data={item} id={index} key={index} />;
+            })}
+          </div>
+        </div>
+      )}
+      {isLoading && <LoadingSpinner />}
+      {!isLoading && !data && <NoData />}
+    </Fragment>
   );
 };
 

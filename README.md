@@ -13,6 +13,8 @@ Nosotros comprendemos que a veces pueden surgir bloqueos de conocimiento para po
 
 ## Correr el programa localmente
 
+### Usar version de Node >= 15.3.0
+
 Clona el proyecto
 
 ```bash

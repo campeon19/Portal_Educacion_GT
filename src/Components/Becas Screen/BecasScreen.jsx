@@ -4,6 +4,8 @@ import imgHeader from '../Becas/Assets/becas_header.jpg'
 import imgHeader2 from '../Becas/Assets/becas3.jpg'
 import './BecasScreen.css'
 import { fetchBecas } from '../../util/http';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import NoData from '../NoData/NoData';
 
 import uvg from '../Becas/Assets/logoUVG.jpg'
 import fjbg from '../Becas/Assets/becaFJBG.jpg'
@@ -15,30 +17,26 @@ const info = [
 ]
 
 
-
-
 export default function Becas() {
-    const [becas, setbecas] = useState([])
-
-    // fetchBecas(1).then((datos) =>{
-    //     setbecas(data.map((beca, index) =>{
-    //         {...beca, id:index}
-    //     }))
-    // })
+    const [becas, setbecas] = useState()
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() =>{
+        setIsLoading(true)
         fetchBecas().then(
             (datos) =>{
                 setbecas(datos.map((beca, index) =>{
                     return {id:index, ...beca}
                 }))
+                setIsLoading(false)
             }
         )
+        
     }, [])
 
-    console.log(becas)
-
     return (
+        <>
+        {becas && (        
         <div>
             <div className='container-size'>
                 <img className='img-header' src={imgHeader2}/>  
@@ -55,6 +53,10 @@ export default function Becas() {
                     })
                 }
             </div>
-        </div>
+        </div>)}
+        {isLoading && <LoadingSpinner />}
+        {!isLoading && !becas && <NoData />}
+
+        </>
     )
 }

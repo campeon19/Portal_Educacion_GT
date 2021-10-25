@@ -1,7 +1,7 @@
 .course-card{
     display: inline-block;
     margin: 1%;
-    height: 50vh;
+    min-height: 50vh;
     width: 45vh;
     box-shadow: 0px 8px 15px 1px #00000081;
     border-radius: 5%;

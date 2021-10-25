@@ -49,7 +49,7 @@ function CourseSearcher() {
                     delete curso.lecciones
                     return {id:key, ...curso }
                 }) 
-                
+
                 console.log(databaseCourses)
                 setData(databaseCourses)
 
@@ -64,6 +64,8 @@ function CourseSearcher() {
 
     return (
         <>
+        <h1 className="display-4 searchbar-title">Busqueda de cursos</h1>
+        
         <form className="course-searchbar" onSubmit={handleSearch}>
   <div className="form-group">
     <label htmlFor="exampleFormControlInput1"> Curso</label>
@@ -87,6 +89,7 @@ function CourseSearcher() {
     </div>
   </div>
 </form>
+<hr/>
 
         {data.length !== 0?<CourseContainer courses={courses}/>: <LoadingSpinner/>}
   </>

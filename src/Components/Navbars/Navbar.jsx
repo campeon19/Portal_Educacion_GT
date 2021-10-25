@@ -10,9 +10,9 @@ export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-black">
           <div className="container">
-            <a className="navbar-brand" href="#">
+            <Link to='/' className="navbar-brand" href="#">
               <img src={logo} className="logo-image"/>
-            </a>
+            </Link>
             <button
               data-toggle="collapse"
               className="navbar-toggler"

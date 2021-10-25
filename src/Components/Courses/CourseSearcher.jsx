@@ -43,15 +43,16 @@ function CourseSearcher() {
     useEffect(()=>{
         fetchCourses().then(
             (datos)=>{
-                const databaseCourses = datos.map((curso, index)=>{
+                const keys = Object.keys(datos)
+                const databaseCourses = keys.map((key)=>{
+                    let curso = datos[key]
                     delete curso.lecciones
-                    return {id:index, ...curso }
-
+                    return {id:key, ...curso }
                 }) 
-
+                
                 console.log(databaseCourses)
-                setData(databaseCourses
-                )
+                setData(databaseCourses)
+
                 setCourses(databaseCourses)
                 
             }

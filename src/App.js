@@ -4,10 +4,11 @@ import { Switch, Route } from 'react-router-dom';
 import Navbar_Course from './Components/Navbars/Navbar-Courses';
 import CourseSearcher from './Components/Courses/CourseSearcher';
 import Becas from './Components/Becas Screen/BecasScreen';
-import BecasInfo from './Components/BecasInfo/BecasInfo';
+import BecasInfoUVG from './Components/BecasInfo/BecasInfoUVG';
 import Jobs from './Components/Jobs/Jobs';
 import JobDetail from './Components/Jobs/JobDetail/JobDetail';
 import HomeScreen from './Components/Homescreen/HomeScreen';
+import BecasInfoFJBG from './Components/BecasInfo/BecasInfoFJBG.jsx';
 
 function App() {
   return (
@@ -22,8 +23,11 @@ function App() {
         <Route path="/becas" exact>
           <Becas />
         </Route>
-        <Route path="/becas/:id" exact>
-          <BecasInfo />
+        <Route path="/becas/beca_UVG" exact>
+          <BecasInfoUVG />
+        </Route>
+        <Route path="/becas/beca_FJBG" exact>
+          <BecasInfoFJBG />
         </Route>
         <Route path="/courses" exact>
           <CourseSearcher />

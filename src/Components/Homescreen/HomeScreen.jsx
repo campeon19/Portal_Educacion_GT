@@ -3,7 +3,7 @@ import "./HomeScreen.css";
 import work from "./assets/work.png";
 import study from "./assets/study.png";
 import graduated from "./assets/graduated.jpg";
-import miFuturo from './assets/mi_futuro.png'
+import miFuturo from "./assets/mi_futuro.png";
 function HomeScreen() {
   return (
     <>
@@ -85,56 +85,66 @@ function HomeScreen() {
         </div>
         <div className="row">
           <div className="col-md-8 blog-main">
-            <h3 className="pb-4 mb-4 font-italic">
-              Acerca de
-            </h3>
+            <h3 className="pb-4 mb-4 font-italic">Acerca de</h3>
 
             <div className="blog-post">
               <h2 className="blog-post-title">¿Qué es Mi Futuro GT?</h2>
-              
+
               <hr />
               <p>
-              Mi Futuro GT es una multiplataforma estudiantil de estudiantes para estudiantes, en la cual puedes encontrar financiamiento o becas para tus estudios universitarios, trabajos aptos para  estudiar al mismo tiempo y cursos preparatorios para entrar a la universidad o ayudarte en los inicios de tu carrera universitaria.
+                Mi Futuro GT es una multiplataforma estudiantil de estudiantes
+                para estudiantes, en la cual puedes encontrar financiamiento o
+                becas para tus estudios universitarios, trabajos aptos para
+                estudiar al mismo tiempo y cursos preparatorios para entrar a la
+                universidad o ayudarte en los inicios de tu carrera
+                universitaria.
               </p>
               <blockquote>
                 <p>
-                Nosotros comprendemos que a veces pueden surgir bloqueos de conocimiento para poder estudiar en un nivel superior. Por lo que solucionamos esto mediante cursos hechos por estudiantes universitarios que reciben horas de servicio o créditos a cambio de publicar material educativo.
+                  Nosotros comprendemos que a veces pueden surgir bloqueos de
+                  conocimiento para poder estudiar en un nivel superior. Por lo
+                  que solucionamos esto mediante cursos hechos por estudiantes
+                  universitarios que reciben horas de servicio o créditos a
+                  cambio de publicar material educativo.
                 </p>
               </blockquote>
-              
-              
+
               <p>
-              A veces existe el deseo y la capacidad para estudiar, pero por barreras económicas es imposible financiar este sueño. Por lo que solucionamos esto mediante 2 maneras:
+                A veces existe el deseo y la capacidad para estudiar, pero por
+                barreras económicas es imposible financiar este sueño. Por lo
+                que solucionamos esto mediante 2 maneras:
               </p>
               <ul>
                 <li>
-                Dando información de manera fácil acerca de becas y financiamientos para estudios de educación superior.
+                  Dando información de manera fácil acerca de becas y
+                  financiamientos para estudios de educación superior.
                 </li>
-                <li>Colaborando con empresas, las cuales colocan en nuestra plataforma empleos de medio tiempo los cuales apoyan a los estudiantes al momento de estudiar. También facilitamos el proceso de aplicación a los puestos.</li>
+                <li>
+                  Colaborando con empresas, las cuales colocan en nuestra
+                  plataforma empleos de medio tiempo los cuales apoyan a los
+                  estudiantes al momento de estudiar. También facilitamos el
+                  proceso de aplicación a los puestos.
+                </li>
               </ul>
               <blockquote>
                 <p>
-                Con estas soluciones estamos aportando a eliminar bloqueos que tienen las personas para no poder estudiar una educación superior. Por lo que esperamos que nuestra plataforma sea de gran ayuda y apoyemos a formar a los profesionales del futuro.
+                  Con estas soluciones estamos aportando a eliminar bloqueos que
+                  tienen las personas para no poder estudiar una educación
+                  superior. Por lo que esperamos que nuestra plataforma sea de
+                  gran ayuda y apoyemos a formar a los profesionales del futuro.
                 </p>
               </blockquote>
-              
             </div>
           </div>
 
           <aside className="col-md-4 blog-sidebar my-auto">
-            
-
-            <img className="logo-about" src ={miFuturo}>
-              
-            </img>
-
+            <img className="logo-about" src={miFuturo}></img>
           </aside>
         </div>
       </div>
       <footer className="blog-footer">
-  <p>&copy;Programadores con bata 2021</p>
-  
-</footer>
+        <p>&copy;Programadores con bata 2021</p>
+      </footer>
     </>
   );
 }

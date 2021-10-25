@@ -1,22 +1,15 @@
-import React,{useState} from 'react';
-import Course from '../CourseCard/Course';
-import './CourseContainer.css'
+import React, { useState } from "react";
+import Course from "../CourseCard/Course";
+import "./CourseContainer.css";
 
-
-
-
-function CourseContainer({courses}) {
-    
-
-    return (
-        <div className='courses-countainer'>
-            {
-                courses.map((course)=>{
-                    return <Course course={course}/>
-                })
-            }
-        </div>
-    )
+function CourseContainer({ courses }) {
+  return (
+    <div className="courses-countainer">
+      {courses.map((course) => {
+        return <Course course={course} />;
+      })}
+    </div>
+  );
 }
 
-export default CourseContainer
+export default CourseContainer;
